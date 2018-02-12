@@ -1,0 +1,230 @@
+ONLY USE TM.java + TM.md
+
+
+CODE::
+
+TM Start Foo
+TM Stop Foo (for lunch...)
+
+TM Start Foo
+TM Describe Foo
+...
+
+
+Stop comes AFTER start 100%
+
+Describe can be applied at any time
+
+
+In terms of Tasks
+
+Foo 
+
+Fi
+
+
+Many log entries
+then
+Tasks
+
+
+TaskLog Entry
+
+
+
+
+
+class TaskLogEntry{
+
+	String command
+
+	String name
+
+	String data
+
+	DateTime timeStamp
+
+}
+
+Log LinkedList<TaskLogEntry>
+
+
+
+
+Need to both read and write to a log file
+
+
+
+
+
+
+
+
+import java.io.*
+import java.time.*
+...
+
+
+
+
+class TimeUtil{
+
+	static String toElapsedTime(long totalSeconds) {
+		long hours = totalSeconds/3600;
+		long mins - (totalSeconds % 3600) / 60;
+		long seconds - totalSeconds % 60;
+
+		return (String.format(%02d:$02d:%02d", hours, mins, seconds));
+	}
+
+}
+
+
+class TaskLog {
+
+	private String fileName;
+
+	TaskLog(String fileName) {
+		this.filename = fileName;
+	}
+
+	void writeLine(String line) throws __ {
+		PrintWriter out = new PrintWriter(new FileWriter(fileName, append:true));
+		out.println(line);
+
+		if(out != null) {
+
+			out.flush();
+			out.close();
+
+		}
+
+}
+
+
+class TaskLogEntry(
+	LocalDateTime timeStamp;
+	String command;
+	String name;
+	String data;
+
+	public TaskLogEntry(String taskLine) {
+		StringTokenizer stok = new String tok (taskLine, delim:" ");
+		int nTokens = stok.countTokens();
+
+		timeStamp = LocalDateTime.parse(Stok.nextToken());
+	}
+
+		
+
+}
+
+
+class TaskDuration {
+	public LocalDateTime start, stop;
+	taskDuration(LoalDateTIme start, LDT stop)
+		this.start = start
+
+	long 
+	return chronounit.seconds.between(Start,Stop);
+
+}
+
+
+class Task {
+	private String name;
+	...
+
+	Task(String name, linkedList<TaskLogEntry> entries) {
+
+	LDT lastStart = null;
+	this.name = name;
+	durations = new LL<TaskDuration>{};
+
+	for(TaskLogENtry entry:entries) {
+		if (entry.name.equals(this.name)) {
+			case "start":
+				lastStart = entry.timeStamp;
+				break;
+			case "stop"
+				if(lastStart != null)
+					addDuration(lastStart, entry.timeStamp)
+				*****	lastStart=null;
+					break;
+			case "describe":
+				description = entry.data;
+				break;
+			}
+	}
+
+	long totalTimeSeconds() {
+
+	long t=0;
+	for(taskDuration d:durations)
+		t+=d.elapedSeconds();
+	return t;
+	}
+
+	void addDuration(LDT start, LDT stop) {
+		durations.add(new TaskDuration(s,s));
+	}
+
+	public String toString() {
+		return "Summary for task": ...
+			""...
+			""...
+	}
+
+}
+
+
+
+
+
+public class TM {
+
+	StringBuilder summary(LL<TaskLogEntry> entries) {
+		StringBuilder summaryText = new StringBuilder();
+		TreeSet<String> taskNames = new TreeSet<String>();
+		long totalSecondsForAllTasks = 0;
+		for (TLE entry:entries)
+			taskNames.add(entry.name);
+		for(String TaskName:taskNames) {
+			Task task = new Task(taskName, entries);
+			totalSeondsForAllTasks+=task.totalTimeSeconds();
+			summaryText.append(task + "\n");
+		}
+		summaryText.append("total Time Spent..." + TimeUtil.toElapsedTime(totalSecondsForAllTasks)):
+		return summaryText;
+	}
+
+	void Usage() {
+		SYstem.err.println("...");
+	}
+
+	void run(String args[]) {
+		LinkedList<TaskLogEntry> entries;
+		try
+		{
+			TaskLog log = new TaskLog(fileName:"TM.log");
+			switch(args[0]){
+
+			log.writeLine(...);
+				case "summary":
+					entries=log.read();
+					if(args.length >1){
+						System.out.println(new Task(args[1],entries));
+					}
+					else
+					{
+						
+					}
+
+			default: usage();
+
+			}
+		}
+
+}
+
+
