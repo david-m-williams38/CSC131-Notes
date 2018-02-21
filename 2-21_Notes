@@ -1,0 +1,174 @@
+2-21-18 CSC 131
+
+MVP - minimal viable project
+
+Startup Weekend - Techstars Startup Weekend Rocklin (HackerLab Rocklin)
+
+Chapter 1-3 MUST BE READ :)
+
+
+
+DUE MARCH 6TH - 13 DAYS - 150 POINTS
+
+::Project Sprint3::
+
+Using Jar Files in our workflow
+
+Using branches, merge, etc:
+Have a running release branch (Main)
+Then have a development branch
+
+Summary:
+Min Max Avg
+Time calculations on a particular task size
+
+Get data out of summary for Sprint3
+
+
+
+Rename a task
+
+java TM rename <Old Task> <New Task>
+
+think about how it should be implemented, what part to edit first
+	Seems like he is saying either to read log or write log file first
+
+	Read text file, delete old log, then recreate old log
+	OR
+	look for rename command then handle the data later
+
+It is valid to rename the task, then create a new task with the same old name
+
+	Probably better to edit the log file so the program doesn't have
+		to keep track of each task as it reads the log file
+
+java TM delete <Task Name>
+
+	Summary before delete or rename, it should NOT come up in the summary
+
+	Keep track of tasks' delete, start, stop, rename, etc.
+	It should function naturally
+
+Make choices about the behavior YOU want
+
+(disallow it in the future) <- Prof thinks it is a bad thing to do
+	Not a good solution to disallow the task name, BUT IT'S BETTER THAN
+		IT NOT FUNCTIONING
+
+Packages/Jar files next week
+	Handle how to create a jar file
+	+
+	How to import/create packages, how the structure works/is implemented
+
+
+class TM
+	Broken into two classes
+	TM + TMModel
+
+	Easier to refactor with the split packages
+
+DON'T HAVE TO UPLOAD TO GITHUB FOR TURN-IN
+BUT
+It is required to submit a git.log
+
+
+If we rename a task to a task that already exists:
+	start starters
+	stop starters
+	start food
+	stop food
+	~~~~~~~~~~~~
+	rename food salad
+	start salad
+	stop salad
+	start food
+	rename starts FOOD
+
+Two approaches:
+	Combine them?
+	^Could get messy due to how many cases of a task there might be
+
+	OR
+
+	***Prompt user that it is "not allowed"
+	***Merge command??
+	***(Prof thinks this is a better solution for us rn)
+
+
+New workspace? Throw some things away
+Talk in groups??
+
+Only 1 DON'T PRINT AVG :P
+
+No need to print min/max/etc with only 1 item/task
+
+TM appmain/main class/etc
+
+WILL BE GONE OVER FRIDAY AS WELL!
+
+
+Public Class TMModel implements ITMModel
+
+Class TM - interacts with user, have a Main()
+
+(he will have class TMGrader, ONLY CONNECTS TO TMModel)
+
+Refactor code, he said that A LOT today...
+
+
+
+
+
+
+
+
+Software Architecture (Lecture 4):
+
+
+Definition of Software Architecture
+
+Decisions + Key Concerns
+
+Styles
+
+Views
+
+Problem vs Solution Structure
+
+
+
+"Don't reinvent the wheel" - find somebody else's "wheel"
+
+decoupling systems - OUR PROJECT TM to TM + TMModel
+
+Separation of Concerns
+	Decomposition, Implementation, etc.
+
+
+Software Architecture:
+	A set of High Level decisions that determine the structure of 
+		the solution
+
+Architectural styles....
+
+System Scope
+
+A decision is ''architectural' if it can be made only by considering the
+	present scope
+
+Strong alignment with the business strategy**
+
+System composition
+	How do we break the system up into pieces...
+	all of the pieces
+	fit together??
+
+Cross-cutting concerns
+	Broad-scoped qualities or properties of the system
+	tradeoffs among the qualities
+
+Conceptual integrity
+
+Software arch. provides a set of WELL-KNOWN SOLUTIONS that are proven
+	to work for similar problems
+
