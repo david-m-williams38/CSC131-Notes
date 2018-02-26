@@ -1,0 +1,168 @@
+Notes for Feb. 26th 2018
+CSC 131 - Software Engineering
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TMModel <-> GUI?
+
+^^
+
+ITMModel
+
+^^
+
+TM <-> User
+
+--------------
+
+Public interface ITMModel {
+
+	// Boolean to know if he is able to do it, yes/no
+	boolean deleteTask( String name)...
+
+	boolean startTask( String name) {
+		
+	}
+
+	boolean stopTask( String name) {
+		
+	}
+
+	boolean describeTask (String name, String description, String Size) {
+		
+	}
+
+	boolean sizeTask ( String name, String size) {
+		
+	}
+
+	boolean renameTask ( String oldName, String newName ) {
+		
+	}
+
+	String taskDescription ( String name)...
+
+	String taskElapsedTime ( String name)...
+
+	String taskSize ( String name)...
+
+	Set<String> taskNames(); <<<<< abstract (treeset, hashset,
+						linkedhashset, etc.)
+
+	String elapsedTimeforAllTasks();
+
+	String minTimeforTasks( String Size);
+	       max
+	       avg
+
+
+}
+
+
+
+----------------------------------------------------
+Don't send info from TMModel to TM
+Code will be shown to us later today
+----------------------------------------------------
+
+
+git tag
+
+git checkout describe2
+
+
+public class TM {
+
+	ITMModel tmModel = new TMModel...
+
+	...
+	...
+	...
+
+
+
+	switch(...) {
+
+		case "Start":	tmModel.startTask(args[1]);	break;
+		case "Stop":	tmModel.stopTask(args[1]);	break;
+		...
+		...
+		...
+		size
+		delete
+		rename
+		describe	if args.length<4
+					tmModel.describeTask(args[1], args[2]);
+				else
+					tmModel.describeTask(args[1], args[2], args[3]);
+			OR
+				tmModel.describeTask(args[1], args[2]);
+				if args.length > ...
+				
+
+
+		summary
+		
+	String summary(String name) {
+
+		StringBuilder summaryText = new StringBuilder();
+
+		summaryText.append("Summary for task	: " + name + "\n");
+		summaryText.append("Size		: " + tmModel.taskSize(name) + "\n");
+
+
+}
+
+public class TMModel implements ITMModel {
+
+	...
+
+	// just like above
+	public boolean ...
+
+	private boolean logCommand( String cmd, String ...data) {
+
+		try {
+			StringBuilder line = new StringBuilder();
+			line.append(LocalDateTime.now());
+			line.append("\t" + data[0]);
+			line.append("\t" + cmd);
+
+			for(int i = 1; i < data.length; i++) 
+				line.append("\t" + data[i]);
+
+			log.writeLine(line.toString());
+
+		}
+		catch...
+
+
+
+
+	}
+
+	writeline throws exceptions
+
+	while
+
+	read() handles it through a try/catch block
+
+	case "Description":
+	description.append(entry.data + "\n");
+	break;
+
+	String description()	{return description.toString());
+	...
+	...
+
+		
+
+
+}
+
+
+
+
+git branch
+
+git checkout mvinterface
+
