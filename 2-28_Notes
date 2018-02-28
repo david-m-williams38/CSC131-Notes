@@ -1,0 +1,102 @@
+Feb 28 Notes for CSC 131
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(the presetation, notes, and probably some of the book will be on the test)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+BELOW IS THE TEST EXPECTATIONS STATED OUTLOUD BY THE PROFESSOR
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+WEEK AFTER THE BREAK IS THE TEST!!!! WEDNESDAY AFTER THE BREAK!!!
+^No writing code, should be analyzing the code, MAYBE multiple choice
+^Best answer
+	OR
+^Short Answer (3-9 OR 3-15 Sentences)
+NO TRUE FALSE
+NO FILL IN THE BLANK
+MAY FILL IN SMALL DIAGRAM (BUT NO COMPLEX DIAGRAMS)
+IF multiple choice, choose BEST ANSWER, more than one answer might be correct
+	ONLY 1 choice will get you the point, but it HAS to be the best
+		answer out of the multiple choice, if it is multiple choice
+
+
+
+
+
+
+Backwards Compat is important :)
+
+WWW -	REST (Representational State Transfer)
+
+Unix shell script architectural style:
+	Pipe-and-Filter
+
+Client/Server
+
+Central Repository (database)
+
+Layered (or Multi-Tiered)
+
+Peer-to-Peer
+
+Model-View-Controller (MVC)!!
+
+^^^^
+Should know about the above!
+
+
+
+Componenets
+	Processing elements that "do the work"
+
+Connectors
+	Enable communication among components
+		Implicit events, explicit (procedure calls), etc...
+		(events will be taught more later)
+		REVISITING THIS LATER
+
+Interfaces
+	Connection points on the components and connectors
+
+Configurations
+	Arrangements of components...
+
+
+
+Model-View-Controller
+
+Model -		holds all data, state, and application logic. Oblivious
+			to the view and controller. Provides API to retrieve
+			state and send notifications of the state changes
+			to "observer"
+
+View -		Gives user a presentation of the model
+
+Controller -	Takes user input and figures out what it means to the model
+
+
+(Observer pattern may be looked at later)
+
+Event Interpreter!!
+
+Standard in + Standard out (<cmd> | <cmd>...)
+
+state of domain model
+
+Model visualizer
+
+Domain model
+
+Know and understand these terms
+
+State of the visual feedback may need to change
+	(EX: In excel, go to formula window, type a formula, and hit the
+		ENTER key on THAT window, that cell now has a different
+		model. It might recompute the whole spreadsheet.
+		Old data/Old news from the previous cell to this new formula)
+
+
+Patterns will be in CSC 133
+
+Wed Feb 28 09:49:51 PST 2018
