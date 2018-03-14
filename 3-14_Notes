@@ -1,0 +1,118 @@
+CSC 131
+Daryl Posnett
+Software Engineering
+March 14th 2018
+
+Notes
+
+
+
+Stepwise Refinement
+
+
+Top-Down Design
+Bottom-Up Design
+
+Example:
+	We don't know what is ahead of a curved road that we have never
+		been before
+
+Top Down
+	Have some idea of what the user wants to do
+
+Break down into different modules
+	We will need to know what are in those modules
+
+Top Down (x2)
+	Have to have some knowledge and confidence of the topic
+
+Bottom-Up
+	Lowest level capabilities are looked at, then step up individually
+		to eventually solve a problem for each module
+
+Working as a programmer
+	We don't just choose top down or bottom up always
+	It will always vary depending on the project and members
+	Same rules apply in class as in real life
+		Do we know enough about the project/task?
+		Do we not know enough?
+			That answer will answer top down or bottom up
+
+Nouns/Verbs
+	Nouns indicate classes
+	Verbs indicate operations on the classes
+
+Responsibility dependent design
+	CRC - Class responsibility collaboration
+
+
+|---------------------------------|
+| Class Name:	<Name>	          |
+|-----------------|---------------|
+|Responsibilities | Collaborators |
+|-----------------|---------------|
+|		  |		  |
+|-----------------|---------------|
+
+
+Limited amount of space on a notecard
+	Notecard rule: make sure your brainstorm can fit on a notecard
+
+Low Tech Methods
+	Better overall, find the easiest method to complete the task
+	Reducing barriers to using the process (of design)
+		Will allow the design to be completed
+
+
+
+
+Core Design Principles and Heuristics
+
+Importance of Managing Complexity
+	Memory
+		7 +-2 values can be memorized in short term memory
+		Humans must be able to understand it
+		Humans write code
+	Managing complexity will allow programming and other tasks easier
+		Humans have limited cognitive abilities
+			Thus, we must manage complexity
+
+Can we have 0 coupling?
+	No, that means we would just have individual programs that don't
+		communicate with each other
+	We might need to sacrifice cohesion for better coupling for the code
+
+Modularity
+	reduces the total amount of complexity
+	Imagine a math book that doesn't have organization, no table of
+		contents, page numbers, etc...
+
+Coupling
+	Minimize some of the coupling, thus minimizing the complexity
+
+Types of coupling
+	Content
+	Common
+	Control
+	Stamp
+	Data
+		(Don't focus too much on the above, this'll be uploaded)
+		(He suggested it won't be on the test too...)
+
+We will need some type of coupling, ALWAYS
+
+Stamp coupling over content coupling??
+	^^Might need to know that
+
+What design has certain coupling, or what coupling is best for the design
+	MIGHT BE ON THE TEST
+
+When coupling is low, cohesion is high
+	As well if cohesion is low, coupling is high
+
+Abstraction
+
+Form consistent abstractions
+	Useful methods help us with them
+	Useful method names are beneficial to everything not just for school
+
